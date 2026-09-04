@@ -15,6 +15,7 @@
         <button class="nav-item active" data-view="dashboard"><svg aria-hidden="true"><use href="#icon-grid"></use></svg><span>Dashboard</span></button>
         <button class="nav-item" data-view="courses"><svg aria-hidden="true"><use href="#icon-book"></use></svg><span>Courses</span></button>
         <button class="nav-item" data-view="assignments"><svg aria-hidden="true"><use href="#icon-check"></use></svg><span>Assignments</span></button>
+        <button class="nav-item" data-view="calendar"><svg aria-hidden="true"><use href="#icon-calendar"></use></svg><span>Calendar</span></button>
       </nav>
       <div class="sidebar-footer"><span class="status-dot"></span><span>All changes saved</span></div>
     </aside>
@@ -26,6 +27,11 @@
           <h1 id="page-title">Dashboard</h1>
         </div>
         <div class="topbar-actions">
+          <div class="notification-wrap"><button class="icon-button notification-button" id="notification-button" aria-label="Notifications" aria-expanded="false"><svg aria-hidden="true"><use href="#icon-bell"></use></svg><span class="notification-badge" id="notification-badge" hidden>0</span></button><div class="notification-dropdown" id="notification-dropdown" hidden></div></div>
+          <button class="icon-button" id="theme-toggle" aria-label="Toggle dark mode"><svg aria-hidden="true"><use href="#icon-moon"></use></svg></button>
+          <button class="icon-button" id="export-data" aria-label="Export data"><svg aria-hidden="true"><use href="#icon-download"></use></svg></button>
+          <button class="icon-button" id="import-data" aria-label="Import data"><svg aria-hidden="true"><use href="#icon-upload"></use></svg></button>
+          <input type="file" id="import-file" accept="application/json" hidden>
           <button class="button secondary" id="quick-add-course"><svg aria-hidden="true"><use href="#icon-plus"></use></svg> Course</button>
           <button class="button primary" id="quick-add-assignment"><svg aria-hidden="true"><use href="#icon-plus"></use></svg> Assignment</button>
         </div>
@@ -52,8 +58,12 @@
     <symbol id="icon-alert" viewBox="0 0 24 24"><path d="M12 4 3 20h18L12 4Z"/><path d="M12 9v5M12 17h.01"/></symbol>
     <symbol id="icon-edit" viewBox="0 0 24 24"><path d="m4 16-.8 4.8L8 20l11.5-11.5a2.1 2.1 0 0 0-3-3L5 17Z"/><path d="m14.5 7.5 2 2"/></symbol>
     <symbol id="icon-trash" viewBox="0 0 24 24"><path d="M4 7h16M10 11v6M14 11v6M6 7l1 14h10l1-14M9 7V4h6v3"/></symbol>
-    <symbol id="icon-calendar" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></symbol>
     <symbol id="icon-trend" viewBox="0 0 24 24"><path d="m4 16 5-5 4 3 7-8"/><path d="M15 6h5v5"/></symbol>
+    <symbol id="icon-calendar" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 10h16"/></symbol>
+    <symbol id="icon-bell" viewBox="0 0 24 24"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></symbol>
+    <symbol id="icon-moon" viewBox="0 0 24 24"><path d="M20 15.5A8.5 8.5 0 0 1 8.5 4 8.5 8.5 0 1 0 20 15.5Z"/></symbol>
+    <symbol id="icon-download" viewBox="0 0 24 24"><path d="M12 4v11M8 11l4 4 4-4M5 20h14"/></symbol>
+    <symbol id="icon-upload" viewBox="0 0 24 24"><path d="M12 15V4M8 8l4-4 4 4M5 20h14"/></symbol>
   </svg>
   <script src="app.js"></script>
 </body>
